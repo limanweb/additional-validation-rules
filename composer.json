@@ -1,5 +1,5 @@
 {
-	"name" : "limanweb/extended-validation-rules",
+	"name" : "limanweb/validation-rules-extensions",
 	"description" : "Extensions for Laravel validation rules",
 	"keywords" : [
 		"laravel",
