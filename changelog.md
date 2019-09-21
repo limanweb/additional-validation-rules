@@ -1,6 +1,6 @@
 # Changelog for limanweb/eloquent-extensions
 
-## 1.0.0 (2019-09-21)
+## 0.1.0 (2019-09-21)
 
 Added rules
 - 'rus_inn',
@@ -11,4 +11,7 @@ Added rules
 - 'blr_unp',
 - 'blr_person_unp'
 
+## 1.0.0 (2019-09-21)
+
+Reworked and refactored
 
