@@ -30,7 +30,6 @@ class ValidationRulesServiceProvider extends ServiceProvider
         $packages = config('validation_rules_ext.packages') ?? [];
         
         foreach ($packages as $value) {
-            echo $value.' package'.PHP_EOL;
             app()->make($value);
         }
         
