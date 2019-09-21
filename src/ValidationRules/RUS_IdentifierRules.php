@@ -1,12 +1,14 @@
 <?php 
 
-namespace Limanweb\ValidationRulesExt\RUS;
+namespace Limanweb\ValidationRulesExt\ValidationRules;
 
-class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtensionPackage
+class RUS_IdentifierRules extends ValidationRulesPackage
 {
     
     /**
+     * List of packege validation rules
      *
+     * @var array
      */
     protected $rules = [
         'rus_inn',
@@ -19,7 +21,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * rus_inn 
      */
-    public static function validateRusInn ($attribute, $value, $parameters, $validator)
+    public function validateRusInn ($attribute, $value, $parameters, $validator)
     {
         // Check for is a string
         if (!is_string($value)) {
@@ -46,7 +48,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * rus_repson_inn
      */
-    public static function validateRusPersonInn ($attribute, $value, $parameters, $validator)
+    public function validateRusPersonInn ($attribute, $value, $parameters, $validator)
     {
         // Check for is a string
         if (!is_string($value)) {
@@ -82,7 +84,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * rus_ogrnip
      */
-    public static function validateRusOgrnip ($attribute, $value, $parameters, $validator)
+    public function validateRusOgrnip ($attribute, $value, $parameters, $validator)
     {
         // Check for is a string
         if (!is_string($value)) {
@@ -104,7 +106,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * rus_ogrn
      */
-    public static function validateRusOgrn ($attribute, $value, $parameters, $validator)
+    public function validateRusOgrn ($attribute, $value, $parameters, $validator)
     {
         // Check for is a string
         if (!is_string($value)) {
@@ -126,7 +128,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * rus_snils
      */
-    public static function validateRusSnils ($attribute, $value, $parameters, $validator)
+    public function validateRusSnils ($attribute, $value, $parameters, $validator)
     {
         // Check for is a string
         if (!is_string($value)) {
@@ -163,5 +165,16 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
         
         return ($controlNumber == ((int) substr($value, 9, 2)));
     }
+    
+    /**
+     * Custom replacer example
+     */
+    // public function replaceCustom ($message, $attribute, $rule, $parameters, $validator)
+    // {
+    //     return trans(
+    //         'validation-rules-ext::validation.rule',
+    //         ['attribute' => $attribute]
+    //     );
+    // }
     
 }

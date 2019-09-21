@@ -1,9 +1,15 @@
 <?php 
 
-namespace Limanweb\ValidationRulesExt\BLR;
+namespace Limanweb\ValidationRulesExt\ValidationRules;
 
-class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtensionPackage
+class BLR_IdentifierRules extends ValidationRulesPackage
 {
+
+    /**
+     * List of packege validation rules
+     *
+     * @var array
+     */
     protected $rules = [
         'blr_unp',
         'blr_person_unp',
@@ -12,7 +18,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * blr_unp
      */
-    public static function validateBlrUnp ($attribute, $value, $parameters, $validator)
+    public function validateBlrUnp ($attribute, $value, $parameters, $validator)
     {
         // Check for string
         if (!is_string($value)) {
@@ -39,7 +45,7 @@ class IdentifierRules extends \Limanweb\ValidationRulesExt\ValidationRulesExtens
     /**
      * blr_person_unp
      */
-    public static function validateBlrPersonUnp ($attribute, $value, $parameters, $validator)
+    public function validateBlrPersonUnp ($attribute, $value, $parameters, $validator)
     {
         // Check for string
         if (!is_string($value)) {
