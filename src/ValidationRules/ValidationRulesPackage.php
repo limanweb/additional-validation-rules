@@ -19,18 +19,28 @@ abstract class ValidationRulesPackage
     /**
      * 
      */
-    public function __construct()
+    public function __construct($rules = null)
     {
-        $this->boot();
+        echo get_class($this);
+        
+        if (!empty($rules) && is_array($rules)) {
+            $rules = array_intersect($rules, $this->rules);
+        } else {
+            $rules = $this->rules;
+        }
+
+        print_r($rules);
+        
+        $this->boot($rules);
     }
     
     /**
      * Boot package validation rules
      */
-    protected function boot()
+    protected function boot(array $rules)
     {
 
-        foreach ($this->rules as $ruleName) {
+        foreach ($rules as $ruleName) {
 
             // Boot rule
             $extend = Str::camel('validate_'.$ruleName);

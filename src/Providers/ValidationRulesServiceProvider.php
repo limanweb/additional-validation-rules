@@ -29,8 +29,14 @@ class ValidationRulesServiceProvider extends ServiceProvider
         
         $packages = config('validation_rules_ext.packages') ?? [];
         
-        foreach ($packages as $value) {
-            app()->make($value);
+        foreach ($packages as $key => $value) {
+            if (is_string($key)) {
+                print_r($value);
+                app()->make($key, ['rules' => $value]);
+            } else {
+                print_r($value);
+                app()->make($value);
+            }
         }
         
     }
