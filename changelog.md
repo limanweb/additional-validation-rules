@@ -1,9 +1,5 @@
 # Changelog for limanweb/eloquent-extensions
 
-## 1.1.1 (2019-09-24)
-
-Any bug fixed. 
-
 ## 1.1.0 (2019-09-24)
 
 Configuration changed. 
