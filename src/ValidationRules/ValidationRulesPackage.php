@@ -21,16 +21,12 @@ abstract class ValidationRulesPackage
      */
     public function __construct($rules = null)
     {
-        echo get_class($this);
-        
         if (!empty($rules) && is_array($rules)) {
             $rules = array_intersect($rules, $this->rules);
         } else {
             $rules = $this->rules;
         }
 
-        print_r($rules);
-        
         $this->boot($rules);
     }
     
