@@ -1,13 +1,17 @@
 # Changelog for limanweb/eloquent-extensions
 
-## 1.1.0 (2019-09-21)
+## 1.1.1 (2019-09-24)
+
+Any bug fixed. 
+
+## 1.1.0 (2019-09-24)
 
 Configuration changed. 
 You can configure rules that will be added into project.
 
 ## 1.0.1 (2019-09-21)
 
-Any bug fixed
+Any bug fixed.
 
 ## 1.0.0 (2019-09-21)
 
