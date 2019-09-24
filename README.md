@@ -36,7 +36,22 @@ php artisan vendor:publish --provider=Limanweb\ValidationRulesExt\Providers\Vali
 
 Edit if you need `config/validation_rules_ext.php`.
 
-By default all validation rule packages will by added.
+By default all validation rule packages will by added. You can configure packages and rules that will be added into project.
+
+For example:
+
+```
+return [
+    'packages' => [
+        // Only one rule of this package will be added into project
+        \Limanweb\ValidationRulesExt\ValidationRules\RUS_IdentifierRules::class => [
+            'rus_inn',  
+        ],
+        // All rules of this package will be added into project
+        \Limanweb\ValidationRulesExt\ValidationRules\BLR_IdentifierRules::class => null,
+    ],
+];
+```
 
 ## Using
 
