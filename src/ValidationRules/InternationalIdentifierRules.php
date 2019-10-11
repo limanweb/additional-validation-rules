@@ -2,7 +2,7 @@
 
 namespace Limanweb\ValidationRulesExt\ValidationRules;
 
-class InternationalIdentifiersRules extends ValidationRulesPackage
+class InternationalIdentifierRules extends ValidationRulesPackage
 {
 
     /**
