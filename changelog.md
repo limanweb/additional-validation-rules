@@ -1,5 +1,15 @@
 # Changelog for limanweb/eloquent-extensions
 
+## 1.3.0 (2019-09-24)
+
+Added rules
+- 'isin',
+- 'bank_card_number',
+
+## 1.2.0 (2019-09-24)
+
+...
+
 ## 1.1.0 (2019-09-24)
 
 Configuration changed. 

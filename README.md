@@ -4,6 +4,9 @@
 
 Packasges includes validation rules for national person and company identifiers.
 
+- **International identifiers**
+  - bank_card_number,
+  - isin
 - **RUS** - Russian identifiers
   - rus_inn,
   - rus_person_inn,
@@ -29,8 +32,10 @@ into `providers` section of `config\app.php`.
 Run command
 
 ```,bash
-php artisan vendor:publish --provider=Limanweb\ValidationRulesExt\Providers\ValidationRulesServiceProvider
+php artisan vendor:publish
 ```
+
+and input number of line with `Limanweb\ValidationRulesExt\Providers\ValidationRulesServiceProvider`
 
 ### 3. Configurate validation rule's packages
 

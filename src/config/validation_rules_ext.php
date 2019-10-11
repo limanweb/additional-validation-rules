@@ -10,5 +10,6 @@ return [
          */ 
         \Limanweb\ValidationRulesExt\ValidationRules\RUS_IdentifierRules::class => null,
         \Limanweb\ValidationRulesExt\ValidationRules\BLR_IdentifierRules::class => null,
+        \Limanweb\ValidationRulesExt\ValidationRules\InternationalIdentifiersRules::class => null,
     ],
 ];

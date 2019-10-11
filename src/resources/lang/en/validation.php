@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'isin' => 'The :attribute has a wrong format or control digit is incorrect',
+    'bank_card_number' => 'The :attribute has a wrong format or control digit is incorrect',
     'rus_inn' => 'The :attribute has a wrong format or control digit is incorrect',
     'rus_person_inn' => 'The :attribute has a wrong format or control digit is incorrect',
     'rus_ogrnip' => 'The :attribute has a wrong format or control digit is incorrect',
