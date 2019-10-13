@@ -2,20 +2,27 @@
 
 ## Additional rules list
 
-Packasges includes validation rules for national person and company identifiers.
+Validation rules for international numbers and identifiers.
 
 - **International identifiers**
   - bank_card_number,
   - isin
+
+Validation rules for national person and company identifiers.
+
 - **RUS** - Russian identifiers
   - rus_inn,
   - rus_person_inn,
+  - rus_kpp,
   - rus_ogrn,
   - rus_ogrnip,
   - rus_snils
 - **BLR** - Belarus identifiers 
   - blr_unp,
   - blr_person_unp
+- **KAZ** - Kazakhstan identifiers 
+  - kaz_iin,
+  - kaz_bin
 
 ## Installing and configuring
 
@@ -60,4 +67,17 @@ return [
 
 ## Using
 
-...in work...
+Use additional rules like as standard laravel validation rules.
+
+```
+validator([
+	'iin' => '760720302830'
+], 
+[
+	'iin' => [
+		'required', 
+		'kaz_iin'
+	]
+])->validate();
+
+```

@@ -1,6 +1,15 @@
 # Changelog for limanweb/eloquent-extensions
 
-## 1.3.0 (2019-09-24)
+## 1.4.0 (2019-10-13)
+
+Added rules
+- 'rus_kpp',
+- 'kaz_iin',
+- 'kaz_bin',
+
+## 1.3.1 (2019-10-11)
+
+## 1.3.0 (2019-10-11)
 
 Added rules
 - 'isin',

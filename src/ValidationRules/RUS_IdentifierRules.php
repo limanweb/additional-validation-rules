@@ -13,6 +13,7 @@ class RUS_IdentifierRules extends ValidationRulesPackage
     protected $rules = [
         'rus_inn',
         'rus_person_inn',
+        'rus_kpp',
         'rus_ogrn',
         'rus_ogrnip',
         'rus_snils',
@@ -79,6 +80,24 @@ class RUS_IdentifierRules extends ValidationRulesPackage
         
         // Check control numbers
         return ($controlNumber1 == $digits[10] && $controlNumber2 == $digits[11]);
+    }
+    
+    /**
+     * rus_kpp
+     */
+    public function validateRusKpp ($attribute, $value, $parameters, $validator)
+    {
+        // Check for is a string
+        if (!is_string($value)) {
+            return false;
+        }
+        
+        // Check format
+        if (!preg_match('/^\d{9}$/',$value)) {
+            return false;
+        }
+        
+        return true;
     }
     
     /**
