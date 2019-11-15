@@ -61,7 +61,7 @@ abstract class ValidationRulesPackage
                     \Validator::replacer($ruleName, function ($message, $attribute, $rule, $parameters, $validator) {
                         return trans(
                             'validation-rules-ext::validation.'.$rule,
-                             ['attribute' => $attribute]
+                            ['attribute' => $validator->customAttributes[$attribute] ?? $attribute]
                         );
                     });
                     

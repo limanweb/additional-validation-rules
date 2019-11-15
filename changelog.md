@@ -1,5 +1,9 @@
 # Changelog for limanweb/eloquent-extensions
 
+## 1.5.0 (2019-11-15)
+
+Fixed custom attribute name replacing
+
 ## 1.4.0 (2019-10-13)
 
 Added rules
