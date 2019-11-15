@@ -60,7 +60,7 @@ abstract class ValidationRulesPackage
                     // Default rule replacer
                     \Validator::replacer($ruleName, function ($message, $attribute, $rule, $parameters, $validator) {
                         return trans(
-                            'validation-rules-ext::validation.'.$rule,
+                            'validation.'.$rule,
                             ['attribute' => $validator->customAttributes[$attribute] ?? $attribute]
                         );
                     });
